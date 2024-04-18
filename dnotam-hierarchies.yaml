@@ -1,0 +1,92 @@
+schema:
+  dimensions:
+    location: # dimension
+      territory: # level
+        rollUpLevel: ALL
+        javaDataType: String
+      fir:
+        rollUpLevel: territory
+        javaDataType: String
+      location:
+        rollUpLevel: fir
+        javaDataType: String
+    topic:
+      category:
+        rollUpLevel: ALL
+        javaDataType: String
+      family:
+        rollUpLevel: category
+        javaDataType: String
+      feature:
+        rollUpLevel: family
+        javaDataType: String
+      
+    time:
+      year:
+        rollUpLevel: ALL
+        javaDataType: Year
+      month:
+        rollUpLevel: year
+        javaDataType: YearMonth
+      day:
+        rollUpLevel: month
+        javaDataType: LocalDate
+
+  hierarchies:
+    location:
+      - territory: Austria
+        fir: LOVV
+        location: LOWW
+      - territory: Austria
+        fir: LOVV
+        location: LOWS
+      - territory: Germany
+        fir: EDMM
+        location: EDJA
+      - territory: Germany
+        fir: EDMM
+        location: EDMO
+      - territory: Germany
+        fir: EDGG
+        location: EDGP
+      - territory: Germany
+        fir: EDGG
+        location: EDDF
+      - territory: France
+        fir: LFBB
+        location: LFBD
+      - territory: France
+        fir: LFBB
+        location: LFFA
+      - territory: France
+        fir: LFMM
+        location: LFMA
+      - territory: France
+        fir: LFMM
+        location: LFMB
+
+    topic:
+      - category: AirportHeliport
+        family: AirportHeliport
+        feature: AirportHeliport # A defined area on land or water (including any buildings, installations and equipment) intended to be used either wholly or in part for the arrival, departure and surface movement of aircraft/helicopters.
+      - category: AirportHeliport
+        family: AirportHeliport
+        feature: AirportHotSpot # A location on aerodrome movement area with a history or potential risk of collision or runway incursion, and where heightened attention by pilots/drivers is necessary.
+      - category: AirportHeliport
+        family: Apron
+        feature: ApronElement # Parts of a defined apron area. ApronElements may have functional characteristics defined in the ApronElement type. ApronElements may have jetway, fuel, towing, docking and ground power services.
+      - category: AirportHeliport
+        family: Apron # A defined area, on a land aerodrome/heliport, intended to accommodate aircraft/helicopters for purposes of loading and unloading passengers, mail or cargo, and for fuelling, parking or maintenance.
+        feature: AircraftStand # A designated area on an apron intended to be used for parking an aircraft.
+      - category: Routes
+        family: EnRoute
+        feature: RouteSegment # A portion of a route to be flown usually without an intermediate stop, as defined by two consecutive significant points.
+      - category: Routes
+        family: EnRoute
+        feature: ChangeOverPoint # The distance from the start of the route portion to the position where change over occurs for VOR defined routes.
+      - category: Routes
+        family: FlightRestrictions
+        feature: AirspaceBorderCrossing # A type of traffic flow condition element which consist of crossing the common border between two adjacent airspace, when flying directly from one airspace into the other airspace.
+      - category: Routes
+        family: FlightRestrictions
+        feature: FlightRestriction # A rule meant to regulate the use of the route network, by identifying a set of flights which fulfil a combination of elementary flow conditions and either forbidding them on a particular routing or obliging them to follow one routing out of a set of mandatory alternatives.

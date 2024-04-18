@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><message:AIXMBasicMessage xmlns:message="http://www.aixm.aero/schema/5.1.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="386446f0-b21a-48e9-8337-a416115d1f31">
+    <message:hasMember>
+        <event:Event gml:id="36d57af9-577c-4cd0-9f6b-992ea740fbdf">
+            <gml:identifier codeSpace="urn:uuid:">36d57af9-577c-4cd0-9f6b-992ea740fbdf</gml:identifier>
+            <event:timeSlice>
+                <event:EventTimeSlice gml:id="4139bb22-e37b-4901-afcc-233fcfa82254">
+                    <gml:TimePeriod gml:id="b2f458aa-7de2-48f9-a316-ca15586bea83">
+                        <gml:beginPosition>2021-01-01T00:00:00Z</gml:beginPosition>
+                        <gml:endPosition>2021-01-01T00:00:00Z</gml:endPosition>
+                    </gml:TimePeriod>
+                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <event:name>EDGP_APECLS_20211228</event:name>
+                    <event:encoding>DIGITAL</event:encoding>
+                    <event:scenario>APE.CLS</event:scenario>
+                    <event:version>2.0</event:version>
+                    <event:revision>2021-12-28T00:00:00Z</event:revision>
+                    <event:textNOTAM>
+                        <event:NOTAM gml:id="e19fcd0a-5ad1-4ea7-a74b-c0e312a657fa">
+                            <event:series>A</event:series>
+                            <event:number>0101</event:number>
+                            <event:year>2021</event:year>
+                            <event:type>N</event:type>
+                            <event:issued>2021-01-01T00:00:00Z</event:issued>
+                            <event:affectedFIR>EDGG</event:affectedFIR>
+                            <event:selectionCode>QMNLC</event:selectionCode>
+                            <event:traffic>IV</event:traffic>
+                            <event:purpose>NBO</event:purpose>
+                            <event:scope>A</event:scope>
+                            <event:minimumFL>000</event:minimumFL>
+                            <event:maximumFL>999</event:maximumFL>
+                            <event:coordinates>522236N315658W</event:coordinates>
+                            <event:radius>005</event:radius>
+                            <event:location>EDDF</event:location>
+                            <event:effectiveStart>1807011200</event:effectiveStart>
+                            <event:effectiveEnd>1807111800</event:effectiveEnd>
+                            <event:text>a text</event:text>
+                        </event:NOTAM>
+                    </event:textNOTAM>
+                </event:EventTimeSlice>
+            </event:timeSlice>
+        </event:Event>
+    </message:hasMember>
+    <message:hasMember>
+        <aixm:AeronauticalGroundLight gml:id="962a92f4-8d06-4fe9-9f77-128d7cfdcc3a">
+            <gml:identifier codeSpace="urn:uuid:">962a92f4-8d06-4fe9-9f77-128d7cfdcc3a</gml:identifier>
+            <aixm:timeSlice>
+                <aixm:AeronauticalGroundLightTimeSlice gml:id="9f1249d4-1d47-42fb-aebb-0b8bc0e8d8e9">
+                    <gml:TimePeriod gml:id="6c9ccec4-8350-409a-8958-6ac6364e015a">
+                        <gml:beginPosition>2021-01-01T00:00:00Z</gml:beginPosition>
+                        <gml:endPosition>2021-01-01T00:00:00Z</gml:endPosition>
+                    </gml:TimePeriod>
+                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:name>EDGP_APECLS_20211228</aixm:name>
+                    <aixm:type xsi:nil="true"/>
+                    <aixm:colour xsi:nil="true"/>
+                    <aixm:flashing xsi:nil="true"/>
+                    <aixm:structureBeacon xsi:nil="true"/>
+                    <aixm:aerodromeBeacon xsi:nil="true"/>
+                    <aixm:location>EDGP</aixm:location>
+                    <aixm:annotation gml:id="bca1297f-8a7d-4908-bd20-6a9381b7515c">
+                        <aixm:Note gml:id="d1f35f3c-335c-4a6d-a555-0a41ff74c381">
+                            <aixm:purpose>DESCRIPTION</aixm:purpose>
+                            <aixm:translatedNote>
+                                <aixm:LinguisticNote gml:id="cd3cf899-4605-47a7-8559-60697af2a313">
+                                    <aixm:note>a note</aixm:note>
+                                </aixm:LinguisticNote>
+                            </aixm:translatedNote>
+                            DESCRIPTION
+                        </aixm:Note>
+                    </aixm:annotation>
+                </aixm:AeronauticalGroundLightTimeSlice>
+            </aixm:timeSlice>
+        </aixm:AeronauticalGroundLight>
+    </message:hasMember>
+</message:AIXMBasicMessage>
