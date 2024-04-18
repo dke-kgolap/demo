@@ -22,9 +22,9 @@ $ java -jar app.jar
 
 The data is generated based schema found [here](dnotam-hierarchies.yaml), this file defines the dataset dimensions, in this case, location, topic and time and their respective hierarchy.  
 
-The file [20210101_EDDF_AeronauticalGroundLight_1](20210101_EDDF_AeronauticalGroundLight_1.xml) is an example of the message data. The file name is not used in the processing within KGOLAP, however, for convenance it does indicate the time, location and the message type. The content of the file conforms to AIXM standard and envelops the contextual information as well as the actuall information which is used for analytic purpose. 
+The file [20210101_EDDF_AeronauticalGroundLight_1](20210101_EDDF_AeronauticalGroundLight_1.xml) is an example of the message data. The file name is not used in the processing within KG-OLAP, however, for convenance it does indicate the time, location and the message type. The content of the file conforms to AIXM standard and envelops the contextual information as well as the actual information which is used for analytic purpose. More information about the structure and content of AIXM messafe can found [here](https://aixm.aero/page/aixm-51-specification).
 
-## Queries 
+## Queries
 
 To evaluate our implementation, we design a set of queries that vary in result size and roll-up operations to verify the system response against different scenarios. In our implementation, we used an SPARQL-like query syntax for ease of use. In the following, we explain each query and the expected result of the cube.  
 
@@ -82,6 +82,10 @@ SELECT time_year=2000 AND location_fir=LOVV
 AND topic_category=Routes 
 ROLLUP ON topic_category, location_location, time_month
 ```
+
+### Query result
+
+A sample of the query result can be found in [SmallResult.nq](SmallResult.nq). The result is RDF quad format which we can use to run graph operation for analytics.  
 
 [^1]: <https://www.aixm.aero>
 [^2]: <https://anonymous.4open.science/r/aixm-gen-F5E1>
