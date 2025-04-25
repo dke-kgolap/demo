@@ -1,4 +1,4 @@
-# Big KG-OLAP Appendix
+# Big KG-OLAP Demonstrator
 
 ## Dataset
 
@@ -41,9 +41,9 @@ $ ./build.sh
 $ java -jar app.jar
 ```
 
-## KGOLAP
+## KG-OLAP
 
-The source code for the KGOLAP system are provided in this [repository](https://anonymous.4open.science/r/kgolap-4C60).
+The source code for the KG-OLAP system are provided in this [repository](https://anonymous.4open.science/r/kgolap-4C60).
 
 ### How to build the KG-OLAP? 
 
