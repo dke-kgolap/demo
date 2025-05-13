@@ -2,7 +2,7 @@
 
 ## Dataset
 
-In our experiments we used generated datasets based on AIXM data model[^1]. We developed an AIXM data generator tool[^2] to allow us to generate a realistic dataset. The tool is based on the Donlon dataset[^3]. The provided link explains how to build and use the tool to generate the desired dataset. In our case, we used the configuration file provided[^4], we specify the start and end time stamp, storage location, and storage type.
+In our experiments we used generated datasets based on AIXM data model[^1], using the Donlon dataset and support tools[^3] as the basis. We developed an AIXM data generator[^2], which allows to generate a realistic dataset. The provided link to the AIXM data generator explains how to build and use the tool to generate the desired dataset. In our case, we used the configuration file provided[^4], we specify the start and end time stamp, storage location, and storage type.
 
 ```shell
 start: "2000-01-01T00:00:00.000Z"
@@ -20,7 +20,7 @@ $ java -jar app.jar
 
 ### Input file
 
-The data is generated based schema found [here](dnotam-hierarchies.yaml), this file defines the dataset dimensions, in this case, location, topic and time and their respective hierarchy.  
+The data is generated based on a schema that can be found [here](dnotam-hierarchies.yaml), this file defines the dataset dimensions -- in this case, location, topic and time and their respective hierarchy.  
 
 The file [20210101_EDDF_AeronauticalGroundLight_1](20210101_EDDF_AeronauticalGroundLight_1.xml) is an example of the message data. The file name is not used in the processing within KG-OLAP, however, for convenance it does indicate the time, location and the message type. The content of the file conforms to AIXM standard and envelops the contextual information as well as the actual information which is used for analytic purpose. More information about the structure and content of AIXM messafe can found [here](https://aixm.aero/page/aixm-51-specification).
 
