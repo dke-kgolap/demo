@@ -41,15 +41,15 @@ $ ./build.sh
 $ java -jar app.jar
 ```
 
-## KG-OLAP
+## KG Lakehouse
 
-The source code for the KG-OLAP system are provided in this [repository](https://anonymous.4open.science/r/kgolap-4C60).
+The source code for the KG Lakehouse are provided in this [repository](https://anonymous.4open.science/r/kgolap-4C60).
 
-### How to build the KG-OLAP? 
+### How to build the KG Lakehouse? 
 
-Please refer to [README](https://anonymous.4open.science/r/kgolap-4C60/README.md) to make sure you have all the requirements. You also need make sure you have docker installed and you have access to a Kubernetes cluster. The document also explains how to build the code and docker images, assuming you have all the regiments the build process should be straight forward.  Once you have build the docker images, you need to push them to [DockerHub](https://hub.docker.com/)
+Please refer to [README](https://anonymous.4open.science/r/kgolap-4C60/README.md) to make sure you satisfy all the requirements. You also need make sure you have Docker installed and you have access to a Kubernetes cluster. The document also explains how to build the code and docker images, assuming you have all the regiments the build process should be straight forward.  Once you have build the docker images, you need to push them to [DockerHub](https://hub.docker.com/)
 
-To deploy the KG-OLAP service please refer to [Kubernetes yaml file](https://anonymous.4open.science/r/kgolap-4C60/k3s/kg-olap.yaml). You need to modify this file and use the correct image names as uploaded them to DockerHub. You also need to have access to a Kubernetes server and have [kubectl tool](https://kubernetes.io/docs/reference/kubectl/) the command to deploy the service is simply: 
+To deploy the KG Lakehouse service please refer to [Kubernetes yaml file](https://anonymous.4open.science/r/kgolap-4C60/k3s/kg-olap.yaml). You need to modify this file and use the correct image names as used when uploading the images to DockerHub. You also need to have access to a Kubernetes server and have [kubectl tool](https://kubernetes.io/docs/reference/kubectl/) the command to deploy the service is simply: 
 
 ```shell
 $ kubectl apply file k3s/kg-olap.yaml
@@ -57,7 +57,7 @@ $ kubectl apply file k3s/kg-olap.yaml
 
 ## Queries
 
-To evaluate our implementation, we design a set of queries that vary in result size and roll-up operations to verify the system response against different scenarios. In our implementation, we used an SPARQL-like query syntax for ease of use. In the following, we explain each query and the expected result of the cube.  
+To evaluate our implementation, we design a set of queries that vary in result size and roll-up operations to verify the system response against different scenarios. In our implementation, we used a SPARQL-like query syntax for ease of use. In the following, we explain each query and the expected result KG-OLAP cube.  
 
 * **Q1**: creates a KG-OLAP cube of all locations and topics during the month of January 2000. The resulting cube contains 6975 contexts or 269700 quads.
 
