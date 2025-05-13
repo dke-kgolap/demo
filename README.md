@@ -43,7 +43,7 @@ $ java -jar app.jar
 
 ## KG Lakehouse
 
-The source code for the KG Lakehouse are provided in this [repository](https://anonymous.4open.science/r/kgolap-4C60).
+The source code for the KG Lakehouse is provided in this [repository](https://anonymous.4open.science/r/kgolap-4C60).
 
 ### How to build the KG Lakehouse? 
 
