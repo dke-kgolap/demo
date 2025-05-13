@@ -1,4 +1,4 @@
-# Big KG-OLAP Demonstrator
+# KG Lakehouse Demonstrator
 
 ## Dataset
 
@@ -22,7 +22,7 @@ $ java -jar app.jar
 
 The data is generated based on a schema that can be found [here](dnotam-hierarchies.yaml), this file defines the dataset dimensions -- in this case, location, topic and time and their respective hierarchy.  
 
-The file [20210101_EDDF_AeronauticalGroundLight_1](20210101_EDDF_AeronauticalGroundLight_1.xml) is an example of the message data. The file name is not used in the processing within KG-OLAP, however, for convenance it does indicate the time, location and the message type. The content of the file conforms to AIXM standard and envelops the contextual information as well as the actual information which is used for analytic purpose. More information about the structure and content of AIXM messafe can found [here](https://aixm.aero/page/aixm-51-specification).
+The file [20210101_EDDF_AeronauticalGroundLight_1](20210101_EDDF_AeronauticalGroundLight_1.xml) is an example of the message data. The file name is not used in the processing within the KG Lakehouse, however, for convenance it does indicate the time, location and the message type. The content of the file conforms to AIXM standard and envelops the contextual information as well as the actual information which is used for analytic purpose. More information about the structure and content of AIXM messafe can found [here](https://aixm.aero/page/aixm-51-specification).
 
 ### How to generate the dataset?
 
@@ -57,7 +57,7 @@ $ kubectl apply file k3s/kg-olap.yaml
 
 ## Queries
 
-To evaluate our implementation, we design a set of queries that vary in result size and roll-up operations to verify the system response against different scenarios. In our implementation, we used a SPARQL-like query syntax for ease of use. In the following, we explain each query and the expected result KG-OLAP cube.  
+To evaluate our implementation, we design a set of KG-OLAP cubes that vary in result size and roll-up operations to verify the system response against different scenarios. In our implementation, we used a SPARQL-like specification to describe the KG-OLAP cubes  for ease of use. In the following, we explain each specification and the expected result KG-OLAP cube.  
 
 * **Q1**: creates a KG-OLAP cube of all locations and topics during the month of January 2000. The resulting cube contains 6975 contexts or 269700 quads.
 
@@ -114,9 +114,9 @@ AND topic_category=Routes
 ROLLUP ON topic_category, location_location, time_month
 ```
 
-### Query result
+### Result
 
-A sample of the query result can be found in [SmallResult.nq](SmallResult.nq). The result is RDF quad format which we can use to run graph operation for analytics.  
+A sample of the result can be found in [SmallResult.nq](SmallResult.nq). The result is RDF quad format which we can use to run graph operation for analytics.  
 
 [^1]: <https://www.aixm.aero>
 [^2]: <https://anonymous.4open.science/r/aixm-gen-F5E1>
